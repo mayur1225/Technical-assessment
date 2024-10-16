@@ -1,0 +1,36 @@
+{
+  "name": "technical-assessment",
+  "version": "1.0.0",
+  "description": "user authentication in Node.js using Test-Driven Development (TDD)",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "test": "mocha -r ts-node/register src/tests/**/*.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/chai": "^5.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "^22.7.5",
+    "bcryptjs": "^2.4.3",
+    "chai": "^5.1.1",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "mocha": "^10.7.3",
+    "mongoose": "^8.7.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "winston": "^3.15.0"
+  }
+}
