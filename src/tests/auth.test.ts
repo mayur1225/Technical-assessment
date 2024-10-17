@@ -28,4 +28,27 @@ describe('User Authentication', () => {
                 done();
             });
     });
+
+    it('should login the user with correct credentials', (done) => {
+        request(app)
+            .post('/auth/login')
+            .send({ username: 'mayur.patel', password: 'Mayur@2024' })
+            .expect(200)
+            .end((err, res) => {
+                if (err) return done(err);
+                done();
+            });
+    });
+
+    it('should not login the user with incorrect credentials', (done) => {
+        request(app)
+            .post('/auth/login')
+            .send({ username: 'mayur.patel', password: 'Mayur@2023' })
+            .expect(401)
+            .end((err, res) => {
+                if (err) return done(err);
+                expect(res.body.error).toBe('Invalid credentials');
+                done();
+            });
+    });
 });
